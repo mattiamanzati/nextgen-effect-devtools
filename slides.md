@@ -9,13 +9,9 @@ class: 'text-center'
 # https://sli.dev/custom/config-highlighter.html
 highlighter: shiki
 # some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+info: A presentation about the Devtools that will be available to Effect developers
 transition: slide-left
-title: Welcome to Slidev
+title: Next-gen Devtools for Effect
 mdc: true
 ---
 
