@@ -13,7 +13,12 @@
     "@slidev/theme-seriph": "^0.25.0"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.38.1"
+    "playwright-chromium": "^1.38.1",
+    "effect": "3.13.11",
+    "@effect/language-service": "0.4.0",
+    "typescript":"^5.8.2",
+    "@effect/experimental": "0.43.2",
+    "@effect/platform-node":"^0.75.2"
   },
   "packageManager": "pnpm@8.10.0+sha512.9c2cb83f2b6cf6a25d8c58300bf99197c7ef3be84cf3e766f29054b40b83b42f8aaba6fcc314a9ecf27c00f7ce80a757bb4c608800e7adbe2d29dc5c7056f5be"
 }
