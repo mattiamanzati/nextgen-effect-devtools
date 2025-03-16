@@ -41,7 +41,6 @@ Today, we're going to discuss what's already available, which you might not be a
 When I think about the process involved in building a effect applications, I see many steps that may receive some quality of life improvements.
 -->
 
-
 ---
 layout: fact
 ---
@@ -211,6 +210,15 @@ Just like the react devtools, we plan to make the devtools to be able to connect
 
 ---
 
-<!--
+# What's next?
 
+<!--
+What's next for the devtools?
+You decide!
+
+I can't wait to speak with you all hearing what are your pain points and what you would like to see next in the devtools, so we can work together and improve the effect experience.
 -->
+
+---
+
+# Thank you!
