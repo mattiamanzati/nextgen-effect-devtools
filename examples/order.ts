@@ -28,5 +28,16 @@ export class CurrentCustomerId extends Effect.Service<CurrentCustomerId>()("Curr
   succeed: { userId: 1}
 }) {}
 
-export declare function getOrderById(id: string): Effect.Effect<Order, OrderNotFoundError>
-export declare function getPriceOfProduct(productId: string): Effect.Effect<number, ProductNotFoundError | PricingNotFoundError>
+export function getOrderById(id: string): Effect.Effect<Order, OrderNotFoundError> {
+  return Effect.succeed({
+    id: "1",
+    userId: "1",
+    cartItems: [
+      { productId: "1", quantity: 2 },
+      { productId: "2", quantity: 1 },
+    ],
+  })
+}
+export function getPriceOfProduct(productId: string): Effect.Effect<number, ProductNotFoundError | PricingNotFoundError> {
+  return Effect.succeed(10)
+}

@@ -149,7 +149,7 @@ However, language server plugins are only loaded by your editor.
 
 Take for example floting effect, that is the situation where you have an effect that is not bound to a variable or used in a yield statement. 
 
-Right now the compiler will not catch this error, because the LSP is loaded only inside the editor, and not by the TSC compiler.
+Right now we have a LSP rule, but the compiler will not catch this error, because the LSP is loaded only inside the editor, and not by the TSC compiler.
 
 To address this, we plan to build an ESLint plugin specifically targeting these scenarios, so we can catch this errors in the linting phase before compiling your code. 
 
@@ -189,18 +189,31 @@ Setting it up its really easy, you just add it from the vscode marketplace, and 
 Once you have it enabled, you can use the clients panel to start the server and connect to a running effect program, and start getting informations like metrics, traces and the current effect context when you are debugging your application.
 
 This is great but we plan to improve this experience even more.
+-->
+---
 
+<SlidevVideo autoplay autoreset="slide">
+  <source src="/video-debug-stack.mp4" type="video/mp4" />
+</SlidevVideo>
+
+<!--
 Debugging Effect is kinda different from any regular JS code out there.
 Instead of writing code that is executed as-is, Effect is lazy and is just a description of a computation that can be re-executed as many times as we want.
 And this description is run by the Effect runtime, that is the one that actually executes the code.
 
 This means that placing a debug break and looking at the call stak will result in a different experience than what you are used to with plain sync JS code.
 All of the code in the debug stack is related to the effect runtime, and not to your actual code.
+-->
+---
 
+<!--
 This is why we plan to add a new feature that will allow to see your effect spans directly inside your vscode editor when you are debugging your application.
 
 We plan to make those spans interactive so that things like jumping to the source code of the span, or seeing the actual code that generated the error span will be possible, all of this without leaving your vscode editor.
+-->
+---
 
+<!--
 Speaking of editor, we also plan to make the devtools agnostic of the editor you are using. Just like the react devtools, we plan to build an experience that can be run in the browser as a chrome extension, inside vscode, or as a standalone application.
 
 In order to reach this approach, we will also research in removing the need to wrap your main effect application with some code in order to enable the devtools.
