@@ -33,7 +33,9 @@ preload: false
 <!--
 Hello everyone!
 
-My name is Mattia Manzati,
+My name is Mattia Manzati, you may remember me from last year's talk about Effect Cluster.
+
+I'm used to wear my red sweatshirt as a cape, but I think it's now time to toss it away to make an announcment.
 -->
 ---
 preload: false
@@ -43,9 +45,7 @@ layout: center
 # ![effectful](/image-effectful.png)
 
 <!--
-
-
-and I am proud to announce that I am now a Founding Engineer at Effectful!
+I am proud to announce that I am now a Founding Engineer at Effectful!
 
 Starting from the upcoming month, I'll be working on tools that will allow you, as Effect developers, to enhance your productivity in writing Effect-based codebases.
 
@@ -66,10 +66,13 @@ Well, it may seem obvious at first, but the first area we'll talk about is the c
 When you start coding your Effect application, it's fully type-safe, and you feel confident. Everything works, is great right? Well, except for those times when you start battling the type system. Sure, type safety is great, but it comes at the cost of producing correct types. But what happens when you fail to do that? -->
 ---
 preload: false
+layout: center
 ---
 
+![ts error](/image-ts-error.png)
+
 <!--
-You get 30 lines of TypeScript errors complaining about something not being assignable. As developers, we try to decipher the error messages, but they aren't always clear or readable.
+You get lines of TypeScript errors complaining about something not being assignable. As developers, we try to decipher the error messages, but they aren't always clear or readable.
 
 Many of you might not know this, but even at this phase, we have something that can significantly improve your coding experience with Effect. Just one line of code can make a big difference.
 -->
@@ -241,21 +244,33 @@ Debugging Effect is kinda different from any regular JS code out there.
 Instead of writing code that is executed as-is, Effect is lazy and is just a description of a computation that can be re-executed as many times as we want.
 And this description is run by the Effect runtime, that is the one that actually executes the code.
 
-This means that placing a debug break and looking at the call stak will result in a different experience than what you are used to with plain sync JS code.
+This means that placing a debug break and looking at the call stack will result in a different experience than what you are used to with plain sync JS code.
 All of the code in the debug stack is related to the effect runtime, and not to your actual code.
 -->
 ---
 preload: false
+layout: center
 ---
 
+![span viewer](/image-trace-viewer.png)
+
 <!--
-This is why we plan to add a new feature that will allow to see your effect spans directly inside your vscode editor when you are debugging your application.
+This is why we plan to allow to see your effect spans directly inside your vscode editor when you are debugging your application.
+
+Just like we already provide the ability inside of the current effect playground.
 
 We plan to make those spans interactive so that things like jumping to the source code of the span, or seeing the actual code that generated the error span will be possible, all of this without leaving your vscode editor.
 -->
 ---
 preload: false
 ---
+
+# DevTools for every environment <sup>(future)</sup>
+<br/>
+
+- Chrome extension
+- VSCode extension
+- Standalone application
 
 <!--
 Speaking of editor, we also plan to make the devtools agnostic of the editor you are using. Just like the react devtools, we plan to build an experience that can be run in the browser as a chrome extension, inside vscode, or as a standalone application.
@@ -267,9 +282,11 @@ Just like the react devtools, we plan to make the devtools to be able to connect
 
 ---
 preload: false
+layout: center
 ---
 
 # What's next?
+Let's shape it together!
 
 <!--
 What's next for the devtools?
@@ -279,7 +296,22 @@ I can't wait to speak with you all hearing what are your pain points and what yo
 -->
 
 ---
+layout: image-right
+image: /image-sebastian.jpeg
 preload: false
 ---
 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+
 # Thank you!
+
+x.com/mattiamanzati
+
+
+---
+
