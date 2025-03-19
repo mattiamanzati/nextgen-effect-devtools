@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@effect/schema": "0.73.0",
-    "@slidev/cli": "51.3.0",
+    "@slidev/cli": "51.4.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "^0.25.0"
   },

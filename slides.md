@@ -17,6 +17,7 @@ mdc: true
 ---
 layout: image-left
 image: /image-me.jpg
+preload: false
 ---
 
 # Ego Slide
@@ -32,7 +33,19 @@ image: /image-me.jpg
 <!--
 Hello everyone!
 
-My name is Mattia Manzati, and I am proud to announce that I am now a Founding Engineer at Effectful!
+My name is Mattia Manzati,
+-->
+---
+preload: false
+layout: center
+---
+
+# ![effectful](/image-effectful.png)
+
+<!--
+
+
+and I am proud to announce that I am now a Founding Engineer at Effectful!
 
 Starting from the upcoming month, I'll be working on tools that will allow you, as Effect developers, to enhance your productivity in writing Effect-based codebases.
 
@@ -43,6 +56,7 @@ When I think about the process involved in building a effect applications, I see
 
 ---
 layout: fact
+preload: false
 ---
 ## It all starts with... code?
 
@@ -51,12 +65,16 @@ Well, it may seem obvious at first, but the first area we'll talk about is the c
 
 When you start coding your Effect application, it's fully type-safe, and you feel confident. Everything works, is great right? Well, except for those times when you start battling the type system. Sure, type safety is great, but it comes at the cost of producing correct types. But what happens when you fail to do that? -->
 ---
+preload: false
+---
 
 <!--
 You get 30 lines of TypeScript errors complaining about something not being assignable. As developers, we try to decipher the error messages, but they aren't always clear or readable.
 
 Many of you might not know this, but even at this phase, we have something that can significantly improve your coding experience with Effect. Just one line of code can make a big difference.
 -->
+---
+preload: false
 ---
 
 # @effect/langugage-service
@@ -75,6 +93,8 @@ How does this fit into the Effect world? Our plugin provides additional diagnost
 -->
 
 ---
+preload: false
+---
 
 <SlidevVideo autoplay autoreset="slide">
   <source src="/video-error-yield.mp4" type="video/mp4" />
@@ -83,6 +103,8 @@ How does this fit into the Effect world? Our plugin provides additional diagnost
 <!--
 Let's look at a real-world example. Many of you know how painful it is to fix situations like this one: a screen full of red squiggly lines. An entire page of unclear errors. Can you immediately spot where the error is?
 -->
+---
+preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
@@ -96,6 +118,8 @@ We first install it via npm and then we edit our tsconfig.json to add the effect
 -->
 
 ---
+preload: false
+---
 
 <SlidevVideo autoplay autoreset="slide">
   <source src="/video-enable-tsc-workspace.mp4" type="video/mp4" />
@@ -108,6 +132,8 @@ Et voi la, we have the effect language service plugin enabled for our project.
 As you can see the difference is immediate. One quick look, and the language server plugin points you to the error. In this case, we used `yield` instead of `yield*`.
 -->
 ---
+preload: false
+---
 
 <SlidevVideo autoplay autoreset="slide">
   <source src="/video-missing-error.mp4" type="video/mp4" />
@@ -118,6 +144,8 @@ Another common issue is missing services or errors in your Effect data type.
 
 Even in this case, the error is not immediately clear. You need to hover over the error and deep dive to see what's wrong.
 -->
+---
+preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
@@ -130,6 +158,8 @@ With the language service, the difference is huge.
 The LSP will provide additional errors, and if you enable code lenses to see errors in-line, what was once a section of squiggly nonsense now clearly shows where the problem is, without needing to hover over the error and dig into it.
 -->
 ---
+preload: false
+---
 
 <SlidevVideo autoplay autoreset="slide">
   <source src="/video-rewrite-gen.mp4" type="video/mp4" />
@@ -138,6 +168,8 @@ The LSP will provide additional errors, and if you enable code lenses to see err
 <!--
 But it's not just diagnostics. We also offer functionalities like refactors to help you write Effect code. For example, you can refactor an `async/await` function into an Effect by right-clicking and choosing the appropriate refactor. It will automatically define error objects and convert your `async/await` into an `effect.gen`.
 -->
+---
+preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
@@ -155,6 +187,8 @@ To address this, we plan to build an ESLint plugin specifically targeting these 
 
 -->
 ---
+preload: false
+---
 
 <!--
 Long-term, we plan to add more rules, including stylistic ones, to improve your code.
@@ -165,6 +199,8 @@ Take generic services, for example. Many of us have tried to create them while l
 
 -->
 
+---
+preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
@@ -180,6 +216,8 @@ Setting it up its really easy, you just add it from the vscode marketplace, and 
 
 -->
 ---
+preload: false
+---
 
 <SlidevVideo autoplay autoreset="slide">
   <source src="/video-devtools-enabled.mp4" type="video/mp4" />
@@ -190,6 +228,8 @@ Once you have it enabled, you can use the clients panel to start the server and 
 
 This is great but we plan to improve this experience even more.
 -->
+---
+preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
@@ -205,12 +245,16 @@ This means that placing a debug break and looking at the call stak will result i
 All of the code in the debug stack is related to the effect runtime, and not to your actual code.
 -->
 ---
+preload: false
+---
 
 <!--
 This is why we plan to add a new feature that will allow to see your effect spans directly inside your vscode editor when you are debugging your application.
 
 We plan to make those spans interactive so that things like jumping to the source code of the span, or seeing the actual code that generated the error span will be possible, all of this without leaving your vscode editor.
 -->
+---
+preload: false
 ---
 
 <!--
@@ -222,6 +266,8 @@ Just like the react devtools, we plan to make the devtools to be able to connect
 -->
 
 ---
+preload: false
+---
 
 # What's next?
 
@@ -232,6 +278,8 @@ You decide!
 I can't wait to speak with you all hearing what are your pain points and what you would like to see next in the devtools, so we can work together and improve the effect experience.
 -->
 
+---
+preload: false
 ---
 
 # Thank you!
