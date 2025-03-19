@@ -6,7 +6,7 @@
         "module": "NodeNext",
         "moduleResolution": "nodenext",
         "plugins": [{
-            "name": "@effect/language-servicef"
+            "name": "@effect/language-serviceg"
         }]
     },
     "include": ["**/*.ts"],

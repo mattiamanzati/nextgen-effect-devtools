@@ -66,13 +66,22 @@ Well, it may seem obvious at first, but the first area we'll talk about is the c
 When you start coding your Effect application, it's fully type-safe, and you feel confident. Everything works, is great right? Well, except for those times when you start battling the type system. Sure, type safety is great, but it comes at the cost of producing correct types. But what happens when you fail to do that? -->
 ---
 preload: false
-layout: center
 ---
 
-![ts error](/image-ts-error.png)
+<SlidevVideo autoplay autoreset="slide">
+  <source src="/video-wtf-error.mp4" type="video/mp4" />
+</SlidevVideo>
 
 <!--
-You get lines of TypeScript errors complaining about something not being assignable. As developers, we try to decipher the error messages, but they aren't always clear or readable.
+You get lines of TypeScript errors complaining about something not being assignable. 
+
+And as a developer, I would say that my first reaction was...
+
+-->
+---
+
+![ts error](/image-meme-confused.png)
+<!--
 
 Many of you might not know this, but even at this phase, we have something that can significantly improve your coding experience with Effect. Just one line of code can make a big difference.
 -->
@@ -80,7 +89,7 @@ Many of you might not know this, but even at this phase, we have something that 
 preload: false
 ---
 
-# @effect/langugage-service
+# @effect/langugage-service <sup>(already available!)</sup>
 <br/>
 
 - Works with any editor that supports TypeScript Language Service Protocol
@@ -104,7 +113,11 @@ preload: false
 </SlidevVideo>
 
 <!--
-Let's look at a real-world example. Many of you know how painful it is to fix situations like this one: a screen full of red squiggly lines. An entire page of unclear errors. Can you immediately spot where the error is?
+Let's look at a real-world example. Many of you know how painful it is to fix situations like this one. 
+
+Can you immediately spot where the error is?
+
+I only see TypeScript gibberish of things I don't care about.
 -->
 ---
 preload: false
@@ -160,6 +173,13 @@ With the language service, the difference is huge.
 
 The LSP will provide additional errors, and if you enable code lenses to see errors in-line, what was once a section of squiggly nonsense now clearly shows where the problem is, without needing to hover over the error and dig into it.
 -->
+
+---
+layout: center
+---
+
+![image relieved](/image-meme-relieved.png)
+
 ---
 preload: false
 ---
@@ -171,6 +191,8 @@ preload: false
 <!--
 But it's not just diagnostics. We also offer functionalities like refactors to help you write Effect code. For example, you can refactor an `async/await` function into an Effect by right-clicking and choosing the appropriate refactor. It will automatically define error objects and convert your `async/await` into an `effect.gen`.
 -->
+
+
 ---
 preload: false
 ---
@@ -186,19 +208,27 @@ Take for example floting effect, that is the situation where you have an effect 
 
 Right now we have a LSP rule, but the compiler will not catch this error, because the LSP is loaded only inside the editor, and not by the TSC compiler.
 
-To address this, we plan to build an ESLint plugin specifically targeting these scenarios, so we can catch this errors in the linting phase before compiling your code. 
-
 -->
 ---
 preload: false
 ---
 
+# @effect/eslint-plugin <sup>(future)</sup>
+- Allows to prevent mistakes like 
+- Will provide an in-editor way to teach Effect best practices
+- ...we'll also look into other linters as well!
+
 <!--
+
+To address this kind of errors, we plan to build an ESLint plugin specifically targeting these scenarios, so we can catch this errors in the linting phase before compiling your code.
+
 Long-term, we plan to add more rules, including stylistic ones, to improve your code.
 
 I strongly believe that building an interactive experience inside your editor with the language service and lint rules will be a significant improvement for those learning Effect or enhancing their Effect codebases.
 
 Take generic services, for example. Many of us have tried to create them while learning Effect, only to struggle with the types. Instead of spending time searching the docs, imagine getting a warning when you define a service with generics, pointing you to the relevant documentation explaining why it's not recommended. This would save time and guide you towards best practices.
+
+And we plan on starting with eslint, but definitely will look into supporting other linting tools as well.
 
 -->
 
@@ -215,9 +245,22 @@ Even though language service and lint rules are great, they are not the only thi
 
 You may already know that there is already a published vscode extension that provides metrics and informations about the current effect context directly inside your vscode editor.
 
-Setting it up its really easy, you just add it from the vscode marketplace, and you need to add few lines of code around your main effect program to enable them.
-
+Setting it up its really easy, you just add it from the vscode marketplace.
 -->
+---
+preload: false
+---
+
+<SlidevVideo autoplay autoreset="slide">
+  <source src="/video-devtools-setup.mp4" type="video/mp4" />
+</SlidevVideo>
+
+<!--
+In your code you need to install the @effect/experimental package.
+
+And finally you need to add few lines of code around your main effect program to enable the instrumentation.
+-->
+
 ---
 preload: false
 ---
@@ -277,7 +320,7 @@ Speaking of editor, we also plan to make the devtools agnostic of the editor you
 
 In order to reach this approach, we will also research in removing the need to wrap your main effect application with some code in order to enable the devtools.
 
-Just like the react devtools, we plan to make the devtools to be able to connect to any running effect application in the current js context, and start getting informations about it. This will be powered by some new experimental globlal hooks that we are planning to introduce in the effect runtime.
+Just like the react devtools, we plan to make the devtools to be able to connect to any running effect application in the current js context, and start getting informations about it.x
 -->
 
 ---
