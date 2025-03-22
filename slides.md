@@ -37,6 +37,14 @@ My name is Mattia Manzati, you may remember me from last year's talk about Effec
 
 I'm used to wear my red sweatshirt as a cape, but I think it's now time to toss it away to make an announcment.
 -->
+
+---
+layout: center
+---
+
+![commit](/image-commit.png)
+![commit-content](/image-commit-content.png)
+
 ---
 preload: false
 layout: center
@@ -69,7 +77,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-wtf-error.mp4" type="video/mp4" />
+  <source src="/video-wtf-error.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -78,6 +86,8 @@ You get lines of TypeScript errors complaining about something not being assigna
 And as a developer, I would say that my first reaction was...
 
 -->
+---
+preload: false
 ---
 
 ![ts error](/image-meme-confused.png)
@@ -109,7 +119,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-error-yield.mp4" type="video/mp4" />
+  <source src="/video-error-yield.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -124,7 +134,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-enable-lsp.mp4" type="video/mp4" />
+  <source src="/video-enable-lsp.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -138,7 +148,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-enable-tsc-workspace.mp4" type="video/mp4" />
+  <source src="/video-enable-tsc-workspace.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -152,7 +162,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-missing-error.mp4" type="video/mp4" />
+  <source src="/video-missing-error.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -165,7 +175,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-missing-error-lsp.mp4" type="video/mp4" />
+  <source src="/video-missing-error-lsp.webm" type="video/webm" />
 </SlidevVideo>
 
 <!-- 
@@ -175,7 +185,19 @@ The LSP will provide additional errors, and if you enable code lenses to see err
 -->
 
 ---
+preload: false
 layout: center
+---
+
+![image relieved](/image-quickinfo.png)
+
+<!--
+And the LSP also provides you with quick info, so that if type truncation happens, you can still see the full type of the Effect success, failures and context.
+-->
+
+---
+layout: center
+preload: false
 ---
 
 ![image relieved](/image-meme-relieved.png)
@@ -185,7 +207,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-rewrite-gen.mp4" type="video/mp4" />
+  <source src="/video-rewrite-gen.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -198,7 +220,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-floating-effect.mp4" type="video/mp4" />
+  <source src="/video-floating-effect.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -224,11 +246,21 @@ To address this kind of errors, we plan to build an ESLint plugin specifically t
 
 Long-term, we plan to add more rules, including stylistic ones, to improve your code.
 
+And we plan on starting with eslint, but definitely will look into supporting other linting tools as well.
+
+-->
+---
+preload: false
+layout: center
+---
+
+## DevTools for interactive learning experiences
+
+<!--
+
 I strongly believe that building an interactive experience inside your editor with the language service and lint rules will be a significant improvement for those learning Effect or enhancing their Effect codebases.
 
 Take generic services, for example. Many of us have tried to create them while learning Effect, only to struggle with the types. Instead of spending time searching the docs, imagine getting a warning when you define a service with generics, pointing you to the relevant documentation explaining why it's not recommended. This would save time and guide you towards best practices.
-
-And we plan on starting with eslint, but definitely will look into supporting other linting tools as well.
 
 -->
 
@@ -237,7 +269,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-install-devtools.mp4" type="video/mp4" />
+  <source src="/video-install-devtools.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -252,7 +284,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-devtools-setup.mp4" type="video/mp4" />
+  <source src="/video-devtools-setup.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -266,7 +298,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-devtools-enabled.mp4" type="video/mp4" />
+  <source src="/video-devtools-enabled.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -279,7 +311,7 @@ preload: false
 ---
 
 <SlidevVideo autoplay autoreset="slide">
-  <source src="/video-debug-stack.mp4" type="video/mp4" />
+  <source src="/video-debug-stack.webm" type="video/webm" />
 </SlidevVideo>
 
 <!--
@@ -289,6 +321,8 @@ And this description is run by the Effect runtime, that is the one that actually
 
 This means that placing a debug break and looking at the call stack will result in a different experience than what you are used to with plain sync JS code.
 All of the code in the debug stack is related to the effect runtime, and not to your actual code.
+
+And I mean, this is not only an effect problem, even React does the same.
 -->
 ---
 preload: false
@@ -322,6 +356,27 @@ In order to reach this approach, we will also research in removing the need to w
 
 Just like the react devtools, we plan to make the devtools to be able to connect to any running effect application in the current js context, and start getting informations about it.x
 -->
+
+---
+preload: false
+layout: image
+image: /image-redarrow-image.png
+---
+
+<!--
+And regarding to traces we also experimented with some chrome-only experimental APIs that allow to change the name of things in the call stack.
+
+Unfortunately due how that API works its not possible to have the correct line and file showing up, but at least it's something that helps you to understand what's going on in the call stack.
+-->
+
+
+---
+preload: false
+layout: center
+---
+
+# Observability
+What to say...it's great!
 
 ---
 preload: false

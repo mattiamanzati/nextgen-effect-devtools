@@ -1,5 +1,5 @@
 {
-  "name": "schema-is-all-you-need",
+  "name": "nextgen-effect-devtools",
   "private": true,
   "scripts": {
     "build": "slidev build",
