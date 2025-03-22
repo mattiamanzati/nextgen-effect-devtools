@@ -3,7 +3,7 @@
   "private": true,
   "homepage": "https://mattiamanzati.github.io/nextgen-effect-devtools/",
   "scripts": {
-    "build": "slidev build --base /nextgen-effect-devtools",
+    "build": "slidev build --base /nextgen-effect-devtools/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
