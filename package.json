@@ -1,6 +1,7 @@
 {
   "name": "nextgen-effect-devtools",
   "private": true,
+  "homepage": "https://mattiamanzati.github.io/nextgen-effect-devtools/",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
